@@ -1,0 +1,36 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    
+    float c1 = 4.00f;
+    float c2 = 4.50f;
+    float c3 = 5.00f;
+    float c4 = 2.00f;
+    float c5 = 1.50f;
+    
+    
+    Console.Write("Informe o código do produto: ");
+    int cod = int.Parse(Console.ReadLine());
+    
+    Console.WriteLine("Digite a quantidade: ");
+    int qtd = int.Parse(Console.ReadLine());
+
+    
+    if (cod==1){
+      Console.Write("O Valor total é: " + c1*qtd);}
+    else if (cod==2){
+      Console.Write("O Valor total é: " + c2*qtd);}
+    else if (cod==3){
+      Console.Write("O Valor total é: " + c3*qtd);}
+    else if (cod==4){
+      Console.Write("O Valor total é: " + c4*qtd);}
+    else if (cod==5){
+      Console.Write("O Valor total é: " + c5*qtd);}
+    else{
+      Console.Write("Código inválido");
+    }
+    
+    
+  }
+}
