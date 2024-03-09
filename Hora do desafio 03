@@ -1,18 +1,22 @@
 using System;
 
-class Program {
-  public static void Main (string[] args) {
-
-    Console.WriteLine("Quantos números você quer na sequência?");
-    int n = int.Parse(Console.ReadLine());
-    int i = 0;
-    int num = 0;
-    int num2 = 1;
-
-    for(i=0; i<=n; i++){
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Quantos números você quer na sequência de fibbonaci?");
+        int n = int.Parse(Console.ReadLine());
+        int i;
+        int num = 0;
+        int num2 = 1;
       Console.Write(num + " " + num2 + " ");
-      num = num + num2;
-      num2 = num + num2;
+
+        for (i = 2; i < n; i++)
+        {
+            int num3 = num2 + num;
+            Console.Write(num3 + " ");
+          num = num2;
+          num2 =num3;
+        }
     }
-  }
 }
