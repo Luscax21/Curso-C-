@@ -1,0 +1,30 @@
+using System;
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+
+        int[] n = new int[10];
+
+
+        for (int i = 0; i < 10; i++)
+        {
+            Console.WriteLine("\nDigite o valor do vetor:");
+            n[i] = int.Parse(Console.ReadLine());
+            if (n[i] <= 0)
+            {
+                n[i] = 0;
+                Console.WriteLine("O valor do vetor: " + $"n°{i} é {n[1]}");
+            }
+            else
+            {
+                Console.WriteLine("O valor do vetor: " + $"n°{i} é {n[i]}");
+            }
+        }
+        Console.WriteLine("\nTodos os campos do vetor foram preenchidos");
+
+
+
+    }
+}
