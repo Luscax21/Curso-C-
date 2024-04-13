@@ -1,0 +1,35 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string[] opcao = { "Pedra", "Papel", "Tesoura" };
+        int[,] resultados = { { 0, -1, 1 }, //pedra
+                              { 1, 0, -1 }, //papel
+                              {-1, 1, 0} }; //tesoura
+
+        Console.WriteLine("Escolha entre Pedra (0), Papel (1) ou Tesoura (2):");
+        int escjogador = int.Parse(Console.ReadLine());
+
+        Random random = new Random();
+        int esccomputador = random.Next(3);
+
+        int resultado = resultados[escjogador, esccomputador];
+
+        Console.WriteLine($"Você escolheu {opcao[escjogador]}, o computador escolheu {opcao[esccomputador]}");
+
+        if (resultado == -1)
+        {
+            Console.WriteLine("Você perdeu!");
+        }
+        else if (resultado == 1)
+        {
+            Console.WriteLine("Você ganhou!");
+        }
+        else
+        {
+            Console.WriteLine("Empate!");
+        }
+    }
+}
